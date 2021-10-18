@@ -10,25 +10,40 @@
   width: 100vw;
 }
 
+/* CONTENT WINDOW */
 .contentWindow {
   flex: 0 0 88vh;
-  display: grid;
+  display: block;
   overflow: scroll;
 
   padding: 15px;
   box-sizing: border-box;
-  
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+
   background-color: indianred;
 }
 
-.contentWindow > * {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  text-align: center;
+/* HOMEPAGE */
+
+/* SEARCH PAGE */
+
+/* TILES PAGE */
+.tilesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
+.gridTile {
+  height: 6rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* NAV PANEL */
 nav {
   flex: 0 0 12vh;
   display: flex;
@@ -44,10 +59,10 @@ nav {
 }
 
 #mainMenu > * {
-  display: flex;  
+  display: flex;
   height: 2.5rem;
   width: 2.5rem;
-  
+
   justify-content: center;
   align-items: center;
 

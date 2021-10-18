@@ -1,31 +1,28 @@
-const contentContainer = document.getElementById('content');
+import getNavBar from './menuBar.js';
+import getTilesPage from './tiles_page.js';
+import getHomepage from './homepage.js';
+import { removeAllChildNodes, replaceWindowContent } from './tools.js';
 
-const contentWindow = document.createElement('div');
-contentWindow.className = 'contentWindow';
+function loadInitial() {
+  const { body } = document;
 
-for (let i = 0; i < 20; i++) {
-  const item = document.createElement('div');
-  // item.textContent = 'hello';
-  contentWindow.appendChild(item);
+  removeAllChildNodes(body);
+
+  // content 
+  const contentContainer = document.createElement('div');
+  contentContainer.id = 'content';
+  body.appendChild(contentContainer);
+
+  // content window
+  const contentWindow = document.createElement('div');
+  contentWindow.className = 'contentWindow';
+  contentContainer.appendChild(contentWindow);
+
+  // nav window
+  contentContainer.appendChild(getNavBar());
 }
 
-// load homepage by default
+loadInitial()
 
-contentContainer.appendChild(contentWindow);
+replaceWindowContent(getHomepage());
 
-const nav = document.createElement('nav');
-contentContainer.appendChild(nav);
-
-const mainMenu = document.createElement('ul');
-mainMenu.id = 'mainMenu';
-
-const menuIconsList = ['home', 'search', 'list', 'favorite_border', 'more_vert'];
-
-for (let i = 0; i < menuIconsList.length; i++) {
-  const item = document.createElement('li');
-  item.textContent = menuIconsList[i];
-  item.classList.add('menuItem', 'material-icons-outlined')
-  mainMenu.appendChild(item);
-}
-
-nav.appendChild(mainMenu);
