@@ -1,5 +1,4 @@
 import getNavBar from './menuBar.js';
-import getTilesPage from './tiles_page.js';
 import getHomepage from './homepage.js';
 import { removeAllChildNodes, replaceWindowContent } from './tools.js';
 

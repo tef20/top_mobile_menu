@@ -10,7 +10,6 @@ export default function getTilesPage() {
   for (let i = 0; i < 30; i++) {
     const tile = document.createElement('div');
     tile.className = 'gridTile';
-    // tile.textContent = 'hi'
 
     tilesGrid.appendChild(tile);
   }

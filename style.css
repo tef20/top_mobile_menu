@@ -70,4 +70,15 @@ nav {
 
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
+
+  cursor: pointer;
+}
+
+#mainMenu > li:active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#mainMenu > li.selected {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(41, 1, 70);
 }
