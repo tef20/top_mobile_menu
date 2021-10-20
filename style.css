@@ -14,7 +14,7 @@
 .contentWindow {
   flex: 0 0 88vh;
   display: block;
-  overflow: scroll;
+  overflow: auto;
 
   padding: 15px;
   box-sizing: border-box;
